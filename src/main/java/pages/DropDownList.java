@@ -7,20 +7,20 @@ import org.openqa.selenium.support.ui.Select;
 public class DropDownList {
 
 	WebDriver driver;
-	private By dropDownList = By.id("dropdown");
+	private By dropDownListBy = By.id("dropdown");
 
 	public DropDownList(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	public boolean selectOption1() {
-		Select dropDown = new Select(driver.findElement(dropDownList));
+		Select dropDown = new Select(driver.findElement(dropDownListBy));
 		dropDown.selectByValue("1");
 		return dropDown.getFirstSelectedOption().getText().contains("Option 1");
 	}
 
 	public boolean selectOption2() {
-		Select dropDown = new Select(driver.findElement(dropDownList));
+		Select dropDown = new Select(driver.findElement(dropDownListBy));
 		dropDown.selectByValue("2");
 		return dropDown.getFirstSelectedOption().getText().contains("Option 2");
 	}

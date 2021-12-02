@@ -11,8 +11,8 @@
 		<parameter name="user" value="tomsmith"></parameter>
 		<parameter name="password" value="SuperSecretPassword!"></parameter>
 		<classes>
-			<class name="tests.LoginTests"></class>
-			<class name="tests.ExceptionsTests"></class>
+			<!-- <class name="tests.LoginTests"></class>
+			<class name="tests.ExceptionsTests"></class> -->
 			<class name="tests.Tests"></class>
 		</classes>
 	</test>

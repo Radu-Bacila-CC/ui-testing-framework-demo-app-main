@@ -31,4 +31,16 @@ public class CheckBoxes {
 		driver.findElement(checkBox1).click();
 		return !driver.findElement(checkBox1).isSelected();
 	}
+
+	public boolean enableBoth() {
+		driver.findElement(checkBox1).click();
+		driver.findElement(checkBox2).click();
+		return (driver.findElement(checkBox1).isSelected() && driver.findElement(checkBox2).isSelected());
+	}
+
+	public boolean disableBoth() {
+		driver.findElement(checkBox1).click();
+		driver.findElement(checkBox2).click();
+		return !(driver.findElement(checkBox1).isSelected() && driver.findElement(checkBox2).isSelected());
+	}
 }

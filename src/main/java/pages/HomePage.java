@@ -13,6 +13,9 @@ public class HomePage {
 	private By addOrRemoveLink = By.xpath("//div[@id='content']/ul//a[@href='/add_remove_elements/']");
 	private By checkBoxesLink = By.xpath("//div[@id='content']/ul//a[@href='/checkboxes']");
 	private By dropDownListLink = By.xpath("//div[@id='content']/ul//a[@href='/dropdown']");
+	private By brokenImagesLink = By.xpath("//div[@id='content']/ul//a[@href='/broken_images']");
+	private By contextMenuLink = By.xpath("//div[@id='content']/ul//a[@href='/context_menu']");
+	private By javaScriptAlertsLink = By.xpath("//div[@id='content']/ul//a[@href='/javascript_alerts']");
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -53,5 +56,25 @@ public class HomePage {
 	public DropDownList clickDropDownList() {
 		driver.findElement(dropDownListLink).click();
 		return new DropDownList(driver);
+	}
+
+	public BrokenImages clickBrokenImages() {
+		driver.findElement(brokenImagesLink).click();
+		return new BrokenImages(driver);
+	}
+
+	public BasicAuth clickBasicAuth() {
+		driver.navigate().to("http://admin:admin@the-internet.herokuapp.com/basic_auth");
+		return new BasicAuth(driver);
+	}
+
+	public ContextMenu clickContextMenu() {
+		driver.findElement(contextMenuLink).click();
+		return new ContextMenu(driver);
+	}
+
+	public JavaScriptAlerts clickJavaScriptAlerts() {
+		driver.findElement(javaScriptAlertsLink).click();
+		return new JavaScriptAlerts(driver);
 	}
 }
